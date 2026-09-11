@@ -357,9 +357,30 @@
             const splash = document.getElementById('splashScreen');
             if (btn && splash) btn.addEventListener('click', () => {
                 splash.classList.add('hidden');
+                playMusic();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         })();
+    </script>
+
+    <!-- Musica de fondo: "Estrella Brilla Hoy" -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="musica-fondo.mp3?v=1" type="audio/mpeg">
+    </audio>
+    <button id="musicBtn" onclick="toggleMusic()" aria-label="M&uacute;sica" title="M&uacute;sica" style="
+        position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+        background: rgba(42,8,25,0.85); backdrop-filter: blur(10px);
+        border: 2px solid var(--gold); border-radius: 50%;
+        width: 50px; height: 50px; cursor: pointer; font-size: 1.3rem;
+        color: var(--gold); box-shadow: 0 4px 15px rgba(212,175,55,0.4);
+    ">&#x1F3B5;</button>
+    <script>
+        var musicPlaying = false;
+        var bgAudio = document.getElementById('bgMusic');
+        bgAudio.volume = 0.4;
+        function setMusicIcon() { document.getElementById('musicBtn').textContent = musicPlaying ? '\u{1F507}' : '\u{1F3B5}'; }
+        function playMusic() { bgAudio.play().then(function () { musicPlaying = true; setMusicIcon(); }).catch(function () {}); }
+        function toggleMusic() { if (musicPlaying) { bgAudio.pause(); musicPlaying = false; setMusicIcon(); } else { playMusic(); } }
     </script>
 
     <script>window.EVENTO_SLUG='xv-estrella-lizbeth';</script>
