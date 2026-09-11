@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log&iacute;stica - XV A&ntilde;os Estrella Lizbeth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); color: #333; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #be185d 0%, #f472b6 100%); color: white; padding: 3rem 2rem; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .nav-links { display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+        .nav-links a { display: inline-block; background: rgba(255,255,255,0.2); color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; transition: all 0.3s; font-weight: 600; }
+        .nav-links a:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+        .content { padding: 3rem 2rem; }
+        .section { margin-bottom: 3rem; }
+        .section-title { font-size: 1.8rem; color: #be185d; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid #be185d; display: flex; align-items: center; gap: 10px; }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .info-card { background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .info-card h3 { color: #be185d; margin-bottom: 1rem; font-size: 1.3rem; }
+        .info-card p { margin-bottom: 0.5rem; line-height: 1.6; }
+        .info-card strong { color: #be185d; }
+        .timeline { position: relative; padding-left: 2rem; }
+        .timeline:before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, #be185d 0%, #f472b6 100%); }
+        .timeline-item { position: relative; margin-bottom: 2rem; padding-left: 2rem; }
+        .timeline-item:before { content: ""; position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; border-radius: 50%; background: white; border: 3px solid #be185d; }
+        .timeline-item.completed:before { background: #10b981; border-color: #10b981; }
+        .timeline-date { font-weight: 600; color: #be185d; margin-bottom: 0.5rem; }
+        .status-badge { display: inline-block; padding: 0.25rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; margin-left: 0.5rem; }
+        .status-completed { background: #d1fae5; color: #065f46; }
+        .status-pending { background: #fef3c7; color: #92400e; }
+        .status-urgent { background: #fee2e2; color: #991b1b; }
+        .checklist { list-style: none; }
+        .checklist li { padding: 0.75rem; margin-bottom: 0.5rem; background: #f8f9fa; border-left: 4px solid #be185d; border-radius: 5px; display: flex; align-items: center; gap: 10px; }
+        .checklist li:before { content: "☐"; font-size: 1.5rem; color: #be185d; }
+        .checklist li.done:before { content: "✓"; color: #10b981; }
+        .contact-box { background: linear-gradient(135deg, #be185d 0%, #f472b6 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center; }
+        .contact-box a { color: white; text-decoration: underline; }
+        @media (max-width: 768px) { body { padding: 1rem; } .info-grid { grid-template-columns: 1fr; } .header h1 { font-size: 2rem; } }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Logística del Evento</h1>
+            <p>XV A&ntilde;os Estrella Lizbeth Floreano Rodr&iacute;guez</p>
+            <p>Sábado 10 de Octubre, 2026</p>
+            <div class="nav-links">
+                <a href="index.html">Invitación</a>
+                <a href="contrato.html">Contrato</a>
+                <a href="logistica.html">Logística</a>
+                <a href="selector.html">Selector</a>
+                <a href="invitados.html">Invitados</a>
+                <a href="datos.html">Datos</a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <!-- Información General -->
+            <section class="section">
+                <h2 class="section-title">📋 Información General</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>&#x1F451; Festejada</h3>
+                        <p><strong>Nombre:</strong> Estrella Lizbeth Floreano Rodr&iacute;guez</p>
+                        <p><strong>Fecha del evento:</strong> Sábado 10 de octubre de 2026</p>
+                        <p><strong>Pap&aacute;s:</strong> Por confirmar</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>&#x1F4DE; Contacto</h3>
+                        <p><strong>Contratante:</strong> Ana Elizabeth</p>
+                        <p><strong>Tel/WhatsApp:</strong> 477 417 1628</p>
+                        <p><strong>Email:</strong> Por confirmar</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>&#x26EA; Ceremonia</h3>
+                        <p><strong>Lugar:</strong> Parroquia de la Joya Inmaculada Concepci&oacute;n</p>
+                        <p><strong>Direcci&oacute;n:</strong> Piedad de la Joya, Le&oacute;n, Gto.</p>
+                        <p><strong>Hora:</strong> 12:00 PM</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>&#x1F389; Recepci&oacute;n</h3>
+                        <p><strong>Lugar:</strong> Sal&oacute;n &Aacute;ngela</p>
+                        <p><strong>Direcci&oacute;n:</strong> Henares 134, Piedad de la Joya, Le&oacute;n, Gto.</p>
+                        <p><strong>Hora:</strong> 4:00 PM &mdash; fin por confirmar</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Horario del día del evento -->
+            <section class="section">
+                <h2 class="section-title">🕐 Horario del Día del Evento</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <p class="timeline-date">12:00 PM <span class="status-badge status-pending">&#x26EA; Ceremonia</span></p>
+                        <p>Misa &mdash; Parroquia de la Joya Inmaculada Concepci&oacute;n (1 hora de cobertura)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">4:00 PM <span class="status-badge status-pending">&#x1F389; Recepci&oacute;n</span></p>
+                        <p>Sal&oacute;n &Aacute;ngela &mdash; Henares 134, Piedad de la Joya</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">8:00 PM <span class="status-badge status-pending">&#x1F3AC; Fin cobertura</span></p>
+                        <p>Termina la cobertura contratada (4 horas de fiesta)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Timeline del proyecto -->
+            <section class="section">
+                <h2 class="section-title">📅 Cronología del Proyecto</h2>
+                <div class="timeline">
+                    <div class="timeline-item completed">
+                        <p class="timeline-date">10 de Septiembre, 2026 <span class="status-badge status-completed">&#x2705; Hecho</span></p>
+                        <p>Firma de contrato y apartado de $2,000 (efectivo)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">2 de Octubre, 2026 <span class="status-badge status-urgent">&#x26A0;&#xFE0F; Importante</span></p>
+                        <p>Fecha l&iacute;mite de liquidaci&oacute;n: $3,990</p>
+                        <p style="font-size:0.9em; color:#666; margin-top:0.5rem;">8 d&iacute;as antes del evento</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">10 de Octubre, 2026 <span class="status-badge status-pending">&#x23F3; Pendiente</span></p>
+                        <p><strong>D&Iacute;A DEL EVENTO</strong></p>
+                        <p>Misa 12:00 PM &middot; Recepci&oacute;n 4:00 PM</p>
+                    </div>
+                    <div class="timeline-item">
+                        <p class="timeline-date">Enero 2027 <span class="status-badge status-pending">&#x1F4E6; Entrega</span></p>
+                        <p>Entrega de material (m&aacute;ximo 60 d&iacute;as h&aacute;biles despu&eacute;s del evento)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Checklist -->
+            <section class="section">
+                <h2 class="section-title">✅ Checklist Foro 7</h2>
+
+                <h3 style="color:#be185d; margin: 1.5rem 0 1rem;">Datos confirmados</h3>
+                <ul class="checklist">
+                    <li class="done">Nombre: Estrella Lizbeth Floreano Rodr&iacute;guez</li>
+                    <li class="done">Contratante: Ana Elizabeth &mdash; 477 417 1628</li>
+                    <li class="done">Ceremonia: Parroquia de la Joya Inmaculada Concepci&oacute;n, 12:00 PM</li>
+                    <li class="done">Recepci&oacute;n: Sal&oacute;n &Aacute;ngela, Henares 134, 4:00 PM</li>
+                    <li class="done">Paquete B&aacute;sico $5,990 &mdash; apartado $2,000</li>
+                    <li class="done">Ampliaci&oacute;n cambiada a 16x20</li>
+                </ul>
+
+                <h3 style="color:#be185d; margin: 1.5rem 0 1rem;">Pendientes</h3>
+                <ul class="checklist">
+                    <li>Apellidos y correo de la contratante</li>
+                    <li>Nombres de los pap&aacute;s y padrinos</li>
+                    <li>Hora de t&eacute;rmino de la fiesta</li>
+                    <li>Colores / tem&aacute;tica y c&oacute;digo de vestimenta</li>
+                    <li>Fecha l&iacute;mite de confirmaci&oacute;n y n&uacute;mero de invitados</li>
+                    <li>Itinerario (cena, vals, show)</li>
+                    <li>Fotos para la invitaci&oacute;n y canci&oacute;n de fondo</li>
+                    <li>Ubicaci&oacute;n exacta (Google Maps) de parroquia y sal&oacute;n</li>
+                    <li>2 lugares reservados en mesa para el equipo</li>
+                    <li>Liquidar $3,990 antes del 2 de octubre</li>
+                </ul>
+            </section>
+
+            <!-- Entregables -->
+            <section class="section">
+                <h2 class="section-title">📦 Paquete B&aacute;sico — Entregables</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>Fotograf&iacute;a</h3>
+                        <p>50 fotograf&iacute;as impresas 5x7"</p>
+                        <p>Fotograf&iacute;a ampliada 16x20" <small>(cambio acordado, originalmente 11x14")</small></p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Video</h3>
+                        <p>Pel&iacute;cula en USB 4K (2 horas de grabaci&oacute;n)</p>
+                        <p>Caja impresa para USB y fotograf&iacute;as</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Incluidos</h3>
+                        <p>Invitaci&oacute;n web personalizada</p>
+                        <p>M&uacute;sica personalizada</p>
+                        <p>Cobertura: 1 h ceremonia + 4 h fiesta</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contacto -->
+            <section class="section">
+                <div class="contact-box">
+                    <h3>📞 Contacto</h3>
+                    <p style="margin-bottom:1rem;">
+                        <strong>Ana Elizabeth</strong><br>
+                        WhatsApp: <a href="https://wa.me/524774171628">477 417 1628</a>
+                    </p>
+                    <hr style="border:1px solid rgba(255,255,255,0.3); margin:1.5rem 0;">
+                    <p>
+                        <strong>Producciones Foro 7</strong><br>
+                        WhatsApp: <a href="https://wa.me/5214779203776">477-920-3776</a><br>
+                        Padilla 112, Cumbres de Arbide, León, Gto.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="visitas.js?v=1"></script>
+    <script src="js/foro7-footer.js?v=1"></script>
+</body>
+</html>
