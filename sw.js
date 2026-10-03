@@ -1,4 +1,4 @@
-const CACHE_SHELL = 'estrella-lizbeth-shell-v1';
+const CACHE_SHELL = 'estrella-lizbeth-shell-v2';
 const CACHE_IMAGES = 'estrella-lizbeth-images-v1';
 
 self.addEventListener('install', event => {
